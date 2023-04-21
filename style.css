@@ -1,0 +1,252 @@
+@import url("https://fonts.google.com/share?selection.family=Alkatra%7CIndie%20Flower");
+body{
+    background-color: #B5682F;
+}
+.body2 {
+    top: 0;
+    background-image: url(/FRONT-END/img/back.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+/* MENU 1*/
+.menu{
+    background-image: url(/FRONT-END/img/back.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.ul1{
+    position: hidden;
+}
+
+.thumbnail-container {
+    row-gap:initial;
+    padding: auto ;
+    background-color: #FFF;
+    margin: 0 3px  0 ;        
+    width: 200px;
+    height: 200px;
+    border: 5px solid #1d1d1d;
+    position: relative;
+  }
+  
+  .thumbnail-container img {
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+  }
+  
+  .thumbnail-container p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+    text-align: center;
+  }
+
+/* estilização e criação do carrosel*/
+
+
+.slider{
+    top: 50%;
+    align-items: center;
+    background: #C20101;
+    padding: auto ;
+    margin: 0 auto;
+    width: 1000px;
+    height: 800px;
+    overflow: hidden;
+}
+.slides{
+    align-items: center;
+    width: 600rem;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.slides input{
+    
+    display: none;
+}
+
+.slide{
+    width: 50%;
+    position: relative;
+
+}
+.slide img{
+    width: 1000px;
+    
+}
+.manual-navigation{
+    
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: none;
+    justify-content: center;
+    opacity: 0.01;
+    bottom: 0;
+}
+
+.manual-btn{
+    
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1ms;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+
+.manual-btn:hover{
+    background-color: #FFF;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -33.33%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -200%;
+}
+
+
+/* fim da estilização do carrosel*/
+
+
+
+
+
+
+/* começo da estilização barra laterala*/
+
+/* estilo geral da nav bar*/
+.navigation{
+    z-index:inherit;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    opacity: 1;
+    background: rgb(24, 22, 22);
+    width: 90px;
+    box-shadow: 1px 0 0 #790101;
+    border-left: 1px solid black;
+    overflow-x: hidden; 
+    transition: 0.2s;
+}
+/*comportamento da navbar ao recolher */
+.navigation:hover{
+    min-width: 255px; 
+    width: 15%;
+}
+/* @media(max-width: 1180px){
+    .navigation:hover{
+        width: ;  
+    }
+} */
+
+.navigation ul{
+    position: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 5px;
+
+
+}
+
+.navigation ul li{
+    position: auto;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation ul li a{
+    align-items: center;
+    position: auto;
+    display: flex;
+    width: 60px;
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+.navigation ul li a .icon{
+    position: auto;
+    display: auto;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.navigation ul li a .icon ion-icon{
+    position: auto;
+    font-size: 0.1s;
+    z-index: 1;
+}
+
+.navigation ul li a .title{
+    row-gap: px;
+    position: auto;
+    display: block;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+.navigation ul li.active{
+    background: #C20101;
+}
+.navigation ul li.active a::after{
+    content: '';
+    position: auto;
+    bottom: -30px;
+    right: 0;
+    width: -30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #C20101;
+    color: #FFF;
+    min-width: 100%;
+    height: 2vw;    
+    text-size-adjust: 3px;
+    text-align: center;
+    line-height: 9px;
+    opacity: 0.9; /* adicione o valor de opacidade desejado */
+ }
+ 

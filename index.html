@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>O Pastelão</title>
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+
+  <!-- scripts para a funcionalidade dos icones e do estilo do menu-->
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+  <div class="body2" id="body2">
+
+  <!-- inicio do carrosel da home-->
+  <!-- botões radio-->
+  <div class="slider">
+
+    <div class="slides">
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+
+      <!--fim botões radio-->
+      <!--imagens dos slides-->
+      <div class="slide first">
+        <img src="./img/o melhor.png" alt="imagem 1">
+      </div>
+
+      <div class="slide">
+        <img src="./img/venha-provar.png" alt="imagem 2">
+      </div>
+
+      <div class="slide">
+        <img src="./img/DELIVERY.png" alt="imagem 3">
+      </div>
+
+      <div class="slide">
+        <img src="./img/EU.png" alt="imagem 4">
+      </div>
+      <!-- fim de imagens dos slides-->
+
+      <!--navigarion auto-->
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+    </div>
+
+
+    <div class="manual-navigation">
+      <lable for="radio1" class="manual-btn"></lable>
+      <lable for="radio2" class="manual-btn"></lable>
+      <lable for="radio3" class="manual-btn"></lable>
+      <lable for="radio4" class="manual-btn"></lable>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- MENU LATERAL -->
+
+  <nav class="navigation">
+    <link rel="stylesheet" href="style.css">
+    <ul>
+      <li class="list active">
+        <a href="#body2">
+          <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+          <span class="title">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#menu">
+          <span class="icon"><ion-icon name="grid-outline"></ion-icon></span>
+          <span class="title">Menu</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
+          <span class="title">Sobre</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+          <span class="title">Cardápio completo</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><ion-icon name="ear-outline"></ion-icon></span>
+          <span class="title">FAQ</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+</div>
+<h1>menu</h1>
+  <br><br><br><br>
+  <ul class="ul1">
+
+<div class="menu" id="menu">
+      <li class="thumbnail-container">
+        <img src="/FRONT-END/img/frango-milho.jpg" alt="Descrição da imagem" width="100%" height="70%">
+        <br><br><br><br><br><br><br><br><br><p>Descrição da imagem</p>
+      </li>
+      <li class="thumbnail-container">
+        <img src="/FRONT-END/img/frango-milho.jpg" alt="Descrição da imagem" width="100%" height="70%">
+        <br><br><br><br><br><br><br><br><br><p>Descrição da imagem</p>
+      </li>
+
+      <li class="thumbnail-container">
+        <img src="/FRONT-END/img/frango-milho.jpg" alt="Descrição da imagem" width="100%" height="70%">
+        <br><br><br><br><br><br><br><br><br><p>Descrição da imagem</p>
+      </li>
+
+
+      <li class="thumbnail-container">
+        <img src="/FRONT-END/img/frango-milho.jpg" alt="Descrição da imagem" width="100%" height="70%">
+        <br><br><br><br><br><br><br><br><br><p>Descrição da imagem</p>
+      </li>
+
+      <li class="thumbnail-container">
+        <img src="/FRONT-END/img/frango-milho.jpg" alt="Descrição da imagem" width="100%" height="70%">
+        <br><br><br><br><br><br><br><br><br><p>Descrição da imagem</p>
+      </li>
+    </ul>
+  
+</div><!-- fim dive  menu--> 
+
+
+
+
+  
+  <footer>
+    <p>RUA QUE NÃO EXISTE - BAIRRO DE MENTIRA - Nº 17</p>
+
+
+  </footer>
+  <!-- SCRIPT JS -->
+  <script>
+    const list = document.querySelectorAll('.list');
+    function activeLink() {
+      list.forEach((item) =>
+        item.classList.remove('active'));
+      this.classList.add('active');
+    }
+    list.forEach((item) =>
+      item.addEventListener('click', activeLink));
+  </script>
+  <!-- FIM DO MENU LATERAL-->
+
+  <script>
+    let count = 1;
+    document.getElementById("radio1").checked = true;
+    setInterval(function () {
+      nextimage();
+
+    }, 5000)
+
+    function nextimage() {
+      count++;
+      if (count > 4) {
+        count = 1;
+      }
+      document.getElementById("radio" + count).checked = true;
+
+    }
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
